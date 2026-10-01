@@ -1,0 +1,1 @@
+const t=document.querySelector('#target'),i=document.querySelector('#items');window.addEventListener('message',e=>{let m=e.data;if(m.action==='hide'){t.classList.add('hide');i.innerHTML=''}if(m.action==='show'){t.classList.remove('hide');i.innerHTML=(m.items||[]).map(x=>`<div class="item ${x.selected?'sel':''}">${String(x.label||'Interakció')}</div>`).join('')}});
